@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/admin-ui/static/css/main.b2a2b006.chunk.css",
+    "main.js": "/admin-ui/static/js/main.b66282fd.chunk.js",
+    "main.js.map": "/admin-ui/static/js/main.b66282fd.chunk.js.map",
+    "runtime-main.js": "/admin-ui/static/js/runtime-main.8766060f.js",
+    "runtime-main.js.map": "/admin-ui/static/js/runtime-main.8766060f.js.map",
+    "static/css/2.cf632ce5.chunk.css": "/admin-ui/static/css/2.cf632ce5.chunk.css",
+    "static/js/2.14c9033d.chunk.js": "/admin-ui/static/js/2.14c9033d.chunk.js",
+    "static/js/2.14c9033d.chunk.js.map": "/admin-ui/static/js/2.14c9033d.chunk.js.map",
+    "static/js/3.17773fdc.chunk.js": "/admin-ui/static/js/3.17773fdc.chunk.js",
+    "static/js/3.17773fdc.chunk.js.map": "/admin-ui/static/js/3.17773fdc.chunk.js.map",
+    "index.html": "/admin-ui/index.html",
+    "static/css/2.cf632ce5.chunk.css.map": "/admin-ui/static/css/2.cf632ce5.chunk.css.map",
+    "static/css/main.b2a2b006.chunk.css.map": "/admin-ui/static/css/main.b2a2b006.chunk.css.map",
+    "static/js/2.14c9033d.chunk.js.LICENSE.txt": "/admin-ui/static/js/2.14c9033d.chunk.js.LICENSE.txt",
+    "static/media/bootstrap-icons.css": "/admin-ui/static/media/bootstrap-icons.dfd0ea12.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8766060f.js",
+    "static/css/2.cf632ce5.chunk.css",
+    "static/js/2.14c9033d.chunk.js",
+    "static/css/main.b2a2b006.chunk.css",
+    "static/js/main.b66282fd.chunk.js"
+  ]
+}
