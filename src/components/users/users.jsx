@@ -146,6 +146,45 @@ class Users extends Component {
 		this.handleResetAllCheckedUsers();
 	};
 
+	onDownClick = (user) => {
+		const { users } = this.state;
+		const switchedUsers = users;
+
+		const index = users.indexOf(user);
+		const hold = users[index];
+
+		if (index === users.length - 1) {
+			toast.info("No place to shift downwards", {
+				position: toast.POSITION.TOP_RIGHT,
+			});
+		} else {
+			switchedUsers[index] = switchedUsers[index+1];
+			switchedUsers[index+1] = hold;
+	
+			this.setState({ users: switchedUsers });
+		}
+	}
+
+	onUpClick = (user) => {
+		const { users } = this.state;
+		const switchedUsers = users;
+
+		const index = users.indexOf(user);
+		const hold = users[index];
+
+		if (index === 0) {
+			toast.info("No place to shift upwards", {
+				position: toast.POSITION.TOP_RIGHT,
+			});
+		} else {
+			switchedUsers[index] = switchedUsers[index-1];
+			switchedUsers[index-1] = hold;
+	
+			this.setState({ users: switchedUsers });
+		}
+		
+	}
+
 	getPagedData = () => {
 		const {
 			pageSize,
@@ -231,6 +270,8 @@ class Users extends Component {
 					handleUpdateUser={this.handleUpdateUser}
 					handleEditCompleted={this.handleEditCompleted}
 					handleEditCancel={this.handleEditCancel}
+					onDownClick={this.onDownClick}
+					onUpClick={this.onUpClick}
 				/>
 			</div>
 		);

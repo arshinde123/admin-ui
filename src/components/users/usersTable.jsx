@@ -38,7 +38,8 @@ class UsersTable extends Component {
 			label: "Actions",
 			key: "actions",
 			content: (user, columnProps, isEditing) =>
-				this.getActionsContent(user, columnProps, isEditing),
+				this.getSwitchRowContent(user, columnProps, isEditing),
+				// this.getActionsContent(user, columnProps, isEditing),
 			editable: false,
 		},
 	];
@@ -93,6 +94,13 @@ class UsersTable extends Component {
 		);
 	};
 
+	getSwitchRowContent = (user, columnProps, isEditing) => {
+		return <div style={{ display: 'flex'}}>
+			<div style={{ marginRight: '5px' }} onClick={() => columnProps.onDownClick(user)}>&#8595;</div>
+			<div onClick={() => columnProps.onUpClick(user)}>&#8593;</div>
+		</div>
+	}
+
 	render() {
 		const {
 			users,
@@ -106,6 +114,8 @@ class UsersTable extends Component {
 			handleEditCompleted,
 			handleEditCancel,
 			handleUpdateUser,
+			onDownClick,
+			onUpClick
 		} = this.props;
 		const columnProps = {
 			checkedUsersCount,
@@ -118,6 +128,7 @@ class UsersTable extends Component {
 			handleEditCancel,
 			handleUpdateUser,
 			handleItemUpdateData: handleUpdateUser,
+			onDownClick, onUpClick
 		};
 		const rowProps = {
 			rowCheckedClass: "th-background",
