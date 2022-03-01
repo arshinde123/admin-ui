@@ -96,8 +96,8 @@ class UsersTable extends Component {
 
 	getSwitchRowContent = (user, columnProps, isEditing) => {
 		return <div style={{ display: 'flex'}}>
-			<div style={{ marginRight: '5px' }} onClick={() => columnProps.onDownClick(user)}>&#8595;</div>
-			<div onClick={() => columnProps.onUpClick(user)}>&#8593;</div>
+			<div style={{ marginRight: '5px', cursor: 'pointer' }} onClick={() => columnProps.onDownClick(user)}>&#8595;</div>
+			<div style={{ cursor: 'pointer' }} onClick={() => columnProps.onUpClick(user)}>&#8593;</div>
 		</div>
 	}
 
